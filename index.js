@@ -86,13 +86,18 @@ ${
     : ""
 }
 ${
-  answers.license === "IBM"
-    ? "![](https://img.shields.io/badge/License-IPL%201.0-blue.svg)"
+  answers.license === "Apache"
+    ? "![](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
     : ""
 }
 ${
   answers.license === "Mozilla"
     ? "![](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)"
+    : ""
+}
+${
+  answers.license === "None"
+    ? "![](https://img.shields.io/badge/License-None-blue)"
     : ""
 }
 
@@ -128,7 +133,19 @@ ${
     ? "MIT: A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
     : ""
 }
-      
+${
+  answers.license === "Mozilla"
+    ? "Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work."
+    : ""
+}
+${
+  answers.license === "Apache"
+    ? "A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+    : ""
+}
+${
+  answers.license === "None" ? "No license was required for this project." : ""
+}      
 
      
 ## Contributing:
